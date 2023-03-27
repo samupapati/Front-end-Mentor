@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | [Pricing component with toggle]</title>
+
+  <script src="https://kit.fontawesome.com/170ae9719d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <img class="imgsFundo" id="img-bottom" src="./assets/img/bg-bottom.svg" alt="">
+  <img class="imgsFundo" id="img-top" src="./assets/img/bg-top.svg" alt="">
+  <div class="container">
+    <div class="header">
+      <h1 id="title">Our Pricing</h1>
+      <div class="items">
+        <p>Annually</p>
+        <div class="toggle-div" id="toggle-on-div"><i id="toggleOn" class="toggle fa-solid fa-toggle-on"></i></div>
+        <div class="toggle-div" id="toggle-off-div"><i id="toggleOff" class="toggle fa-solid fa-toggle-off"></i></div>
+        <p>Monthly</p>
+      </div>
+    </div>
+    <div class="cards-container">
+      <div class="card" id="card-basic">
+        <div class="tituloPreco">
+          <h2>Basic</h2>
+          <div class="container-precos"><span class="cifrao">&dollar;</span><span class="preco preco1">19.99</span><span class="preco preco2">199.99</span></div>
+        </div>
+      <hr class="line">
+          <p>500 GB Storage</p>
+          <hr class="line">
+          <p>2 Users Allowed</p>
+          <hr class="line">
+          <p>Send up to 3 GB</p>
+          <hr class="line">
+          <button>Learn More</button>
+       
+      </div>
+      <div class="card" id="card-pro">
+        <div class="tituloPreco">
+          <h2>Professional</h2>
+          <div class="container-precos"><span class="cifrao">&dollar;</span><span class="preco preco1">24.99</span><span class="preco preco2">249.99</span></div>
+        </div>
+          <hr class="line">
+          <p>1TB Storage</p>
+          <hr class="line">
+          <p>5 Users Allowed</p>
+          <hr class="line">
+          <p>Send up to 10 GB</p>
+          <hr class="line">
+          <button>Learn More</button>
+      </div>
+      <div class="card" id="card-master">
+        <div class="tituloPreco">
+          <h2>Master</h2>
+          <div class="container-precos"><span class="cifrao">&dollar;</span><span class="preco preco1">39.99</span><span class="preco preco2">399.99</span></div>
+        </div>
+        <hr class="line">
+          <p>2 TB Storage</p>
+          <hr class="line">
+          <p>10 Users Allowed</p>
+          <hr class="line">
+          <p>Send up to 20 GB</p>
+          <hr class="line">
+          <button>Learn More</button>
+
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/samupapati">samupapati</a>.
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

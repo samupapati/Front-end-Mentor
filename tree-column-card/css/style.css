@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10vh 5vw;
+  background-color: hsl(0deg, 0%, 95%);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  height: 50vh;
+  max-height: 400px;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px;
+}
+
+.card1 {
+  background-color: hsl(31deg, 77%, 52%);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card2 {
+  background-color: hsl(184deg, 100%, 22%);
+}
+
+.card3 {
+  background-color: hsl(179deg, 100%, 13%);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card__img {
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.card1__img {
+  background-image: url("../assets/images/icon-sedans.svg");
+}
+
+.card2__img {
+  background-image: url("../assets/images/icon-suvs.svg");
+}
+
+.card3__img {
+  background-image: url("../assets/images/icon-luxury.svg");
+}
+
+.card h2 {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display";
+  font-size: 3em;
+  color: hsl(0deg, 0%, 95%);
+}
+
+.card p {
+  font-family: "Lexend Deca";
+  font-size: 15px;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  line-height: 25px;
+}
+
+.card a {
+  text-decoration: none;
+  font-family: "Lexend Deca";
+  font-size: 15px;
+  background-color: hsl(0deg, 0%, 95%);
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.card a:hover {
+  background-color: transparent;
+  color: hsl(0deg, 0%, 95%);
+  border: 2px solid hsl(0deg, 0%, 95%);
+}
+
+.card1 a {
+  color: hsl(31deg, 77%, 52%);
+}
+
+.card2 a {
+  color: hsl(184deg, 100%, 22%);
+}
+
+.card3 a {
+  color: hsl(179deg, 100%, 13%);
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    padding: 10vh 20vw;
+  }
+  .card {
+    height: 100vh;
+    max-height: 470px;
+  }
+}
+@media screen and (min-width: 900px) {
+  body {
+    height: 100vh;
+  }
+  .container {
+    flex-direction: row;
+    height: 100%;
+  }
+  .card {
+    height: 100%;
+    max-height: 550px;
+  }
+  .card1 {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+  .card3 {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+  .card h2 {
+    margin-top: -20px;
+  }
+  .card p {
+    margin-top: -20px;
+  }
+  .card a {
+    margin-top: 30px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

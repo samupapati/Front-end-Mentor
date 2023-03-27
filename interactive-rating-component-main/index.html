@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <script src="./jquery-3.6.1.js"></script>
+</head>
+<body class="flex">
+
+  <div class="container flex column">
+    
+    <article id="container-question">
+      <div id="img-star"></div>
+    
+      <section class="texts flex column">
+        <h2>How did we do?</h2>
+      
+        <p>Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
+      </section>
+    
+      <section id="container-ratings" class="container-ratings flex">
+        <span class="num-rating" id="num-rating-1">1</span>
+        <span class="num-rating" id="num-rating-2">2</span> 
+        <span class="num-rating" id="num-rating-3">3</span> 
+        <span class="num-rating" id="num-rating-4">4</span> 
+        <span class="num-rating" id="num-rating-5">5</span>
+      </section>
+    
+      <button id="btn">Submit</button>
+    </article>
+
+  
+  
+    <article id="container-thanks" class="flex column sumir">
+      <img src="./assets/images/illustration-thank-you.svg" alt="phone" id="img-cell">
+  
+      <p id="selected" class="flex">You selected <span id="ratingSelected"> </span> out of 5</p>
+    
+      <h2>Thank you!</h2>
+    
+      <p id="thx-p">We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</p>
+    </article>
+
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      let rating = '';
+
+      $(document).on('click', '.num-rating', function() {
+        $(this).toggleClass('num-rating-active', 'num-rating-active')
+        $(this).siblings().removeClass('num-rating-active')
+
+        rating = this.innerText
+      
+      })
+
+      $('#btn').click(function() {
+        if(rating !== ''){
+          $('#container-thanks').toggleClass('sumir', 'sumir');
+          $('#container-question').toggleClass('sumir', 'sumir');
+          $('#ratingSelected').html('&nbsp;' + rating + '&nbsp;')
+        }
+      })
+    })
+  </script>
+</body>
+</html>

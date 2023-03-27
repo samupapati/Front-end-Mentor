@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;500;700&display=swap');
+
+$veryDarkGrayishBlue: hsl(217, 19%, 35%);
+$desaturatedDarkBlue: hsl(214, 17%, 51%);
+$grayishBlue: hsl(212, 23%, 69%);
+$lightGrayishBlue: hsl(210, 46%, 95%);
+
+@mixin medidas($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($direction){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin backgroundConfigs(){
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;   
+}
+
+.none{
+    display: none !important;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope';
+}
+
+body{
+    @include medidas(100vw, 100vh);
+    @include flex(row);
+    background-color: $lightGrayishBlue;
+    padding: 10vh 5vw;
+}
+
+.container{
+    @include medidas(100%, auto);
+    max-width: 400px;
+    @include flex(column);
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px 0px hsla(214, 17%, 51%, 0.075);
+    position: relative;
+}
+
+.div-img{
+    @include medidas(100%, 250px);
+    background-image: url('../assets/images/drawers.jpg');
+    background-repeat: no-repeat;
+    background-position: center top 40%;
+    background-size: cover;
+    border-top-left-radius: 20px; border-top-right-radius: 20px
+}
+
+.container-bottom{
+    @include medidas(100%, auto);
+    @include flex(column);
+    justify-content: space-between;
+    padding: 40px 40px 15px;
+}
+
+.div-texts{
+    h1{
+        font-size: 20px;
+        color: $veryDarkGrayishBlue;
+    }
+    p{
+        font-size: 14px;
+        color: $desaturatedDarkBlue;
+        margin-top: 20px;
+    }
+}
+
+.div-about-share{
+    @include medidas(100%, auto);
+    @include flex(row);
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.div-foto-perfil{
+    @include medidas(35px, 35px);
+    border-radius: 50%;
+    background-image: url('../assets/images/avatar-michelle.jpg');
+    @include backgroundConfigs();
+}
+
+.name-date{
+    width: 65%;
+    @include flex(column);
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.name-date{
+    span:first-child{
+        font-weight: 700;
+        color: $veryDarkGrayishBlue;
+    }
+    span{
+        font-size: 14px;
+        color: $grayishBlue;
+    }
+}
+
+.share-icon{
+    @include medidas(35px, 35px);
+    border-radius: 50%;
+    background-color: $lightGrayishBlue;
+    background-image: url('../assets/images/icon-share.svg');
+    @include backgroundConfigs();
+    background-size: 50%;
+    cursor: pointer;
+}
+
+.div-share-text{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 7px;
+}
+
+.div-icons{
+    @include flex(row);
+    justify-content: flex-start;
+    gap: 20px;
+    width: 120px;
+    margin-left: -15px;
+}
+
+.icons{
+    @include medidas(25px, 25px);
+    @include backgroundConfigs();
+    cursor: pointer;
+}
+
+.icon1{
+    background-image: url('../assets/images/icon-facebook.svg');
+}
+.icon2{
+    background-image: url('../assets/images/icon-twitter.svg');
+}
+.icon3{
+    background-image: url('../assets/images/icon-pinterest.svg');
+}
+
+@media screen and (min-width: 800px){
+    .container{
+        flex-direction: row !important;
+        max-width: 900px;
+        height: 350px;
+    }
+    .div-img{
+        height: 100%;
+        background-position: left;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+    }
+    .container-bottom{
+        padding: 50px 40px 30px;
+    }
+    .float-share{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        padding: 15px 20px;
+        border-radius: 10px;
+        background-color: $veryDarkGrayishBlue;
+        position: absolute;
+        right: 0px;
+        bottom: 120px;
+        box-shadow: 0px 5px 20px 0px hsla(214, 17%, 51%, 0.075);
+    }
+    .float-share::after{
+        content: '';
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-color: $veryDarkGrayishBlue;
+        top: 20px;
+        right: 25px;
+        transform: rotate(45deg); 
+        z-index: 0;
+        order: 3;
+    }
+    .div-share-text{
+        font-size: 14px;
+    }
+    .div-icons{
+        margin-left: 10px;
+        z-index: 2;
+    }
+    .icons{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .float-share{
+        right: -70px;
+    }
+    .float-share::after{
+        right: 100px;
+    }
+}

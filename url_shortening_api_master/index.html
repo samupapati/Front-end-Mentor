@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body onload="carregarLinksCriados()">
+  <div class="container">
+    <header class="header-container" id="header">
+      <div class="header-esquerda">
+        <img src="assets/images/logo.svg" alt="logo">
+        <nav id="nav">
+          <a href="#" class="links-header">Features</a>
+          <a href="#" class="links-header">Pricing</a>
+          <a href="#" class="links-header">Resources</a>
+        </nav>
+      </div>
+
+      <div class="header-direita" id="header-direita">
+        <a href="#" class="links-header">Login</a>
+        <a href="#" class="botao" id="botao-header">Sign Up</a>
+      </div>
+      <div class="botao-menu" id="botao-menu"></div>
+      <div class="botao-menu" id="botao-menu-fechar"></div>
+    </header>
+    <div id="menu-hamburguer">
+
+    </div>
+    <section class="apresentacao-container">
+      <article class="apresentacao-textos">
+        <h1 class="titulo h1">More than just<br> shorter links</h1>
+
+        <p class="descricao">Build your brand’s recognition and get detailed insights
+          on how your links are performing.</p>
+
+        <a href="#" class="botao apresentacao-botao">Get Started</a>
+
+      </article>
+      <article class="apresentacao-img-div">
+        <img src="assets/images/illustration-working.svg" alt="mulher trabalhando em home office"
+          class="apresentacao-img">
+      </article>
+    </section>
+
+    <div class="fundo">
+      <section class="encurtador-container">
+        <div class="input-container">
+          <input id="input" type="text" placeholder="Shorten a link here..." />
+          <a href="#" class="botao botaoQuadrado" id="botaoInput">Shorten It!</a>
+          <p class="erro" id="erro">Please add a link</p>
+        </div>
+
+        <div id="links-container">
+          
+        </div>
+      </section>
+
+      <section class="estatisticas-container">
+        <div class="estatisticas-info-1">
+          <h2 class="titulo subtitulo">Advanced Statistics</h2>
+
+          <p>Track how your links are performing across the web with our
+            advanced statistics dashboard.</p>
+        </div>
+        <div class="estatisticas-info-2">
+          <div class="caixa caixa1">
+            <h3 class="titulo">Brand Recognition</h3>
+
+            <p>Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your content.</p>
+
+            <div class="circulo circulo1"></div>
+          </div>
+          <div class="caixa caixa2">
+            <h3 class="titulo">Detailed Records</h3>
+
+            <p>Gain insights into who is clicking your links. Knowing when and where
+              people engage with your content helps inform better decisions.</p>
+
+            <div class="circulo circulo2"></div>
+          </div>
+          <div class="caixa caixa3">
+            <h3 class="titulo">Fully Customizable</h3>
+
+            <p>Improve brand awareness and content discoverability through customizable
+              links, supercharging audience engagement.</p>
+
+            <div class="circulo circulo3"></div>
+          </div>
+          <div class="linha"></div>
+        </div>
+      </section>
+    </div>
+
+    <section class="propaganda-container">
+      <h2 class="subtitulo">Boost your links today</h2>
+      <a href="#" class="botao">Get Started</a>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <article class="footer-logo">
+          <img src="assets/images/logo2.svg" alt="logo" />
+        </article>
+        <div class="footer-links-container">
+          <article class="footer-links-div footer-links-div-1">
+            <p class="footer-title">Features</p>
+
+            <a href="#" class="footer-links">Link Shortening</a>
+            <a href="#" class="footer-links">Branded Links</a>
+            <a href="#" class="footer-links">Analytics</a>
+          </article>
+          <article class="footer-links-div footer-links-div-2">
+            <p class="footer-title">Resources</p>
+
+            <a href="#" class="footer-links">Blog</a>
+            <a href="#" class="footer-links">Developers</a>
+            <a href="#" class="footer-links">Support</a>
+          </article>
+          <article class="footer-links-div footer-links-div-3">
+            <p class="footer-title">Company</p>
+
+            <a href="#" class="footer-links">About</a>
+            <a href="#" class="footer-links">Our Team</a>
+            <a href="#" class="footer-links">Careers</a>
+            <a href="#" class="footer-links">Contact</a>
+          </article>
+        </div>
+        <div class="redes-sociais">
+          <div class="icons-redes icon-rede-1"></div>
+          <div class="icons-redes icon-rede-2"></div>
+          <div class="icons-redes icon-rede-3"></div>
+          <div class="icons-redes icon-rede-4"></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

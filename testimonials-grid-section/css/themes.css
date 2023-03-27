@@ -1,0 +1,117 @@
+.box1{
+    position: relative;
+    z-index: 0;
+}
+
+#quote{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 30px;
+    width: 37%;
+}
+
+.box1 .box__person, .box1 .box__texts{
+    z-index: 2;
+}
+
+
+.theme-box-violet{
+    background-color: #7541c8;
+}
+
+.theme-box-dark-gray{
+    background-color: #48556a;
+}
+
+.theme-box-dark{
+    background-color: #19212e;
+}
+
+.theme-box-white{
+    background-color: white;
+}
+
+.theme-border-color-violet{
+    border-color: #CBAAE4;
+}
+
+.theme-color-name-white{
+    color: white;
+}
+
+.theme-color-name-dark{
+    color: hsl(217, 19%, 35%);
+}
+
+.theme-color-title-white{
+    color: white;
+}
+
+.theme-color-title-dark{
+    color: hsl(217, 19%, 35%);
+}
+
+.width-text-daniel{
+    max-width: 265px;
+}
+
+.width-text-jonathan{
+    max-width: 281px;
+}
+
+.width-text-jeanette{
+    max-width: 261px;
+}
+
+.width-text-patrick{
+    max-width: 282px;
+}
+
+.width-text-kira{
+    max-width: 281px;
+}
+
+@media screen and (min-width: 900px){
+    .width-text-daniel{
+        max-width: none;
+    }
+    
+    .width-text-jonathan{
+        max-width: none;
+    }
+    
+    .width-text-jeanette{
+        max-width: none;
+    }
+    
+    .width-text-patrick{
+        max-width: none;
+    }
+    
+    .width-text-kira{
+        max-width: none;
+    }
+}
+
+@media screen and (min-width: 1380px){
+    .width-text-daniel{
+        max-width: 574px;
+    }
+    
+    .width-text-jonathan{
+        max-width: 225px;
+    }
+    
+    .width-text-jeanette{
+        max-width: 222px;
+    }
+    
+    .width-text-patrick{
+        max-width: 582px;
+    }
+    
+    .width-text-kira{
+        max-width: 100%;
+    }
+}

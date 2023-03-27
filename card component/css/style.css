@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    box-sizing: border-box;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0A0C1B;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 60%;
+    width: 80%;
+}
+
+.bloco {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.bloco1 {
+    background-color: #1C1938;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 10% 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bloco2 {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-image: url(../assets/img/image-header-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.titleResumeDiv {
+    width: 90%;
+}
+
+#title {
+    font-family: 'Inter';
+}
+
+#destaque {
+    color: #A559D3;
+}
+
+#resume {
+    font-family: 'Inter';
+    color: #9F9EB1;
+    margin: 8% 0;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.container-dados {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.title-dados {
+    font-family: 'Inter';
+    text-transform: uppercase;
+}
+
+.info-dados {
+    font-family: 'Lexend Deca';
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #9F9EB1;
+}
+
+.capaRoxa {
+    width: 100%;
+    height: 100%;
+    background-color: #510080;
+    filter: opacity(60%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media all and (max-width: 1000px){
+    body{
+        padding-top: 100px;
+        padding-bottom: 900px;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+    .bloco1{
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding: 10%;
+    }
+    .bloco2{
+        height: 55vh;
+        order: -1;
+        background-image: url(../assets/img/image-header-mobile.jpg);
+        background-size: cover;
+        background-position: top;
+        border-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .titleResumeDiv{
+        width: 100%;
+    }
+    #title{
+        text-align: center;
+    }
+    #resume{
+        margin: 4% 0;
+        text-align: center;
+    }
+    .container-dados{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 200px;
+        margin-top: 8%;
+        text-align: center;
+    }
+    .attribution{
+        display: none;
+    }
+}
+
+@media all and (max-width: 500px){
+    .bloco2{
+        height: 40vh;
+    }
+}

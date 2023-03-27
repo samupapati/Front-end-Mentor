@@ -1,0 +1,18 @@
+<div class="nav-container">
+    <img [ngStyle]="{position: mostrar === true ? 'fixed' : 'relative'}"
+        src="assets/images/logo.svg" alt="logo"/>
+
+    <ul [ngStyle]="{display: mostrar === true || innerWidth > 1000 ? 'flex' : 'none'}">
+        <li>About</li>
+        <li>Careers</li>
+        <li>Events</li>
+        <li>Products</li>
+        <li>Support</li>
+    </ul>
+
+    <div *ngIf="innerWidth < 1000 && mostrar === false" (click)="mostrarMenu()" class="icon-menu"></div>
+    <div *ngIf="innerWidth < 1000 && mostrar === true" (click)="fecharMenu()" 
+        [ngStyle]="{position: mostrar === true ? 'fixed' : 'relative'}"
+        class="icon-menu icon-menu-close">
+    </div>
+</div>

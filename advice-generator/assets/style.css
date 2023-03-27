@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;800&family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope';
+    font-weight: 800;
+}
+
+body{
+    background-color: #1f2632;
+    width: 100vw;
+    height: 100vh;
+}
+
+body, .container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: #323a49;
+    max-width: 40vw;
+    height: 50vh;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2)
+}
+
+#advice{
+    color: #52ffa8;
+    font-family: 'Roboto';
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#contConselho{
+    color: #cee3e9;
+    font-size: 28px;
+    width: 90%;
+    text-align: center;
+    margin-top: -30px;
+    margin-bottom: -30px;
+}
+
+#space{
+    width: 90%;
+}
+
+#divider{
+    width: 100%;
+}
+
+#divider{
+    margin-bottom: 2%;
+}
+
+#divButton{
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    text-align: center;
+}
+
+#divButton, #buttonGerar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonGerar{
+    background-color: #52ffa8;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+#buttonGerar:hover{
+    box-shadow: 0px 0px 30px 0px #52ffa8;
+    transition: .3s ease;
+}
+
+@media all and (max-width: 1000px){
+    .container{
+        max-width: 90%;
+        height: 40vh;
+    }
+}

@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+/*
+    Note for text colors:
+
+    1. "Verified Graduate" tem a mesma cor do nome da pessoa com 50% de opacidade
+    2. Os parágrafos de revisão dentro das citações também têm a mesma cor, mas estão com 70% de opacidade
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed";
+}
+
+body {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(210deg, 46%, 95%);
+}
+
+.container {
+  width: 90%;
+  height: 2050px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  margin: 100px 0;
+}
+
+.box {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 374px;
+  box-shadow: 15px 15px 24px -15px rgba(0, 0, 0, 0.0549019608);
+}
+
+.box__person {
+  width: max-content;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.box__person__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  overflow: hidden;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.box__person__img > img {
+  width: 100%;
+  height: 100%;
+}
+
+.box__person__name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.box__person__verified {
+  color: inherit;
+  opacity: 50%;
+  font-size: 13px;
+}
+
+.box__texts__title {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.box__texts__depoiment {
+  opacity: 70%;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+$softCyan: hsl(174, 77%, 80%);
+$strongCyan: hsl(174, 86%, 45%);
+$lightGrayishRed: hsl(14, 92%, 95%);
+$lightRed: hsl(15, 100%, 70%);
+$lightRedBg: hsla(15, 100%, 70%, 0.137);
+$paleBlue: hsl(226, 100%, 87%);
+$veryPaleBlue: hsl(230, 100%, 99%);
+$lightGrayishBlue: hsl(224, 65%, 95%);
+$lightGrayishBlue2: hsl(223, 50%, 87%);
+$grayishBlue: hsl(225, 20%, 60%);
+$darkDesaturedBlue: hsl(227, 35%, 25%);
+
+@mixin medidas($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($direction){
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+}
+
+
+%texto{
+    color: $grayishBlue;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+*{
+    font-family: 'Manrope';
+}
+
+body{
+    overflow-x: hidden;
+}
+
+#img-fundo{
+    position: absolute;
+    @include medidas(100%, 45vh);
+    z-index: 0;
+    top: 0; 
+}
+
+.container{
+    @include medidas(100%, 100vh);
+    @include flex(column);
+    background-color: $veryPaleBlue;
+}
+
+main{
+    @include medidas(90%, min-content);
+    @include flex(column);
+    justify-content: flex-start;
+    z-index: 1;
+
+}
+
+.textos{
+    text-align: center;
+    position: relative;
+    margin: 90px 0;
+
+    h1{
+        font-size: 25px;
+        color: $darkDesaturedBlue;
+        font-weight: 800;
+    }
+    div{
+        width: 220px;
+        margin: 10px auto;
+    }
+    p{
+        @extend %texto;
+    }
+    h1, div, p{
+        position: relative;
+        z-index: 2;
+    }
+    img{
+       position: absolute;
+       width: 165px;
+       top: -40px;
+       left: 0; right: 0;
+       margin: 0 auto;
+       z-index: 1;
+    }
+}
+
+.caixa{
+    @include medidas(100%, min-content);
+    @include flex(column);
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 15px 15px 5px rgba(94, 110, 119, 0.103);
+    margin-bottom: 50px
+}
+
+.top{
+    @include flex(column);
+    @include medidas(100%, min-content);
+
+   .top__pageviews{
+        @extend %texto;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 35px 0;
+   }
+
+   .top__precos{
+        @extend %texto;
+        @include flex(row);
+        margin-bottom: 20px;
+
+        #cifrao, #preco{
+            font-size: 35px;
+            font-weight: 800;
+            color: $darkDesaturedBlue;
+        }
+
+        #preco{
+            margin-right: 10px;
+        }
+   }
+
+   .top__progresso{
+        width: 100%;
+        @include flex(column);
+        position: relative;
+        margin-bottom: 50px;
+
+        #barra{
+            @include medidas(90%, 10px);
+            background-color: $lightGrayishBlue;
+            border-radius: 10px;
+        }    
+        #valor{
+            @include medidas(50%, 100%);
+            background-color: $softCyan;
+            border-radius: 10px;
+        }
+        #slider{
+            @include medidas(40px, 40px);
+            background-color: $strongCyan;
+            background-image: url('../assets/images/icon-slider.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            position: absolute;
+            top: 0; bottom: 0;
+            left: 0; right: 0;
+            margin: auto;
+            box-shadow: 0px 10px 35px -0px hsl(174, 86%, 45%);
+            cursor: pointer;
+         }
+         /*
+         #slider::after{
+            @include medidas(100%, 40px);
+            content: '';
+            display: block;
+            position: relative;
+            bottom: -20px;
+            background-image: linear-gradient(white, black);
+            z-index: 1;
+         }*/
+
+   }
+
+}
+
+.mid{
+    @extend %texto;
+    @include medidas(340px, min-content);
+    @include flex(row);
+    justify-content: space-between;
+
+    #botao-toggle{
+        color: $lightGrayishBlue2;
+        transform: scaleX(-1);
+        font-size: 50px;
+        cursor: pointer;
+    }
+    #botao-toggle:hover{
+        color: $softCyan;
+    }
+    .discount{
+        background-color: $lightRedBg;
+        color: $lightRed;
+        margin-left: 5px;
+        padding: 0 7px;
+        font-size: 13px;
+        border-radius: 10px;
+    }
+    #discount-text{
+        margin-left: 5px;
+        display: none;
+    }
+}
+
+hr{
+    width: 100%;
+    border: 1px solid $lightGrayishBlue2;
+    opacity: 25%;
+    margin: 40px 0 30px;
+}
+
+.bottom{
+    @include flex(column);
+    .bottom__textos{
+        @include flex(column);
+        @include medidas(250px, 80px);
+        @extend %texto;
+        justify-content: space-between;
+        
+        img{
+            @include medidas(13px, 13px);
+            margin-right: 25px;
+        }
+    }
+    #bottom__button{
+        text-decoration: none;
+        background-color: $darkDesaturedBlue;
+        color: $paleBlue;
+        width: 200px;
+        height: 45px;
+        @include flex(row);
+        border-radius: 50px;
+        font-weight: 800;
+        margin: 30px 0;
+    }
+    #bottom__button:hover{
+        color: white;
+    }
+}
+
+@media screen and (min-width: 768px){
+    #img-fundo{
+        height: 60vh;
+    }
+    main{
+        max-width: 600px;
+        
+    }
+    .textos{
+        margin-top: 120px;
+
+        h1{
+            font-size: 30px;
+        }
+        div{
+            width: 410px;
+        }
+        img{
+           top: -50px;
+        }
+    }
+    .top{
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 40px;
+
+        .top__pageviews{
+            order: 1;
+            width: 40%;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 800;
+        }
+        .top__precos{
+            order: 2;
+            width: 40%;
+            margin: 0;
+
+            #cifrao, #preco{
+                font-size: 45px;
+            }
+        }
+        .top__progresso{
+            order: 3;
+            margin: 50px 0;
+
+            #barra{
+                width: 80%;
+            }
+        }
+    }
+    .mid{
+        width: 370px;
+        font-size: 14px;
+        align-self: flex-end;
+        margin-right: 65px;
+
+        #discount-text{
+            display: inline;
+        }
+    }
+    .bottom{
+        width: 80%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+
+        .bottom__textos{
+            align-items: flex-start;
+            font-size: 14px;
+        }
+        #bottom__button{
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Interactive pricing component</title>
+</head>
+
+<body>
+  <img src="./assets/images/bg-pattern.svg" alt="fundo" id="img-fundo">
+
+  <div class="container">
+    <main>
+      <div class="textos">
+        <h1 id="textos__titulo">Simple, traffic-based pricing</h1>
+        <div>
+          <p id="textos__resumo">Sign-up for our 30-day trial. No credit card required.</p>
+        </div>
+        <img src="assets/images/pattern-circles.svg" alt="">
+      </div>
+
+      <div class="caixa">
+        <section class="top">
+          <div class="top__pageviews">
+            <span id="numero-pageviews">100<span>K</span></span>
+            <span>Pageviews</span>
+          </div>
+
+          <div class="top__progresso">
+            <div id="barra"><div id="valor"></div></div>
+            <div id="slider"></div>
+          </div>
+
+          <div class="top__precos">
+            <span id="cifrao">$</span>
+            <span id="preco">16.00</span>
+            <span>/ month</span>
+          </div>
+        </section>
+
+        <section class="mid">
+          <span>Monthly Billing</span>
+          <ion-icon name="toggle-sharp" id="botao-toggle"></ion-icon>
+          <span>Yearly Billing<span class="discount"><span id="percent">-25%<span id="discount-text">discount</span></span></span></span>
+        </section>
+
+        <hr>
+
+        <section class="bottom">
+          <div class="bottom__textos">
+            <div>
+              <img src="assets/images/icon-check.svg" alt="check"><span>Unlimited websites</span>
+            </div>
+            <div>
+              <img src="assets/images/icon-check.svg" alt="check"><span>100% data ownership</span>
+            </div>
+            <div>
+              <img src="assets/images/icon-check.svg" alt="check"><span>Email reports</span>
+            </div>
+          </div>
+
+          <a href="#" id="bottom__button">Start my trial</a>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
